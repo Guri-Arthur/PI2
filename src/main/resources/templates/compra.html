@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmls:th="http://ww.thymeleaf.org">
+    <html>
+        <head>
+            <meta charset="utf-8"> 
+            <meta name="viewport" content="width=device-width, initial-scale=1"> 
+            <title>Compra</title>
+        </head>
+        <body>
+            <h2>Digite as informações para prosseguir</h2>
+            <br/>
+            
+            <form th:action="@{/cadastro-gravar}" th:object="${COMPRA}" method="POST">
+            <label for="nome">Digite o nome do produto:</label>
+            <input type="text" id="nome" th:field="*{nome}"/>
+            <br/>
+
+            <label for="formaPagamento">Digite forma de pagamento:</label>
+            <input type="text" id="formaPagamento" th:field="*{Fpagamento}"/>
+            <br/>
+                   
+            <label for="valor">Digite o valor do produto:</label>
+            <input type="number" id="valor" th:field="*{valor}"/>
+            <br/>
+
+            <label for="desconto">Digite adicianar desconto:</label>
+            <input type="number" id="desconto" th:field="*{desconto}"/>
+            <br/>
+          
+            <input type="submit" value="cadastroCompra"/>
+            <form/>
+            
+        </body>
+    </html>
